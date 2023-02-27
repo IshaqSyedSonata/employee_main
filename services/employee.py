@@ -24,4 +24,11 @@ def add_employee(db, employee_data):
     emp_id = new_employee_data.id # getting the last newly inserted primary key
     return emp_id
 
+def delete_employee(db, emp_id):
+    emp_query = db.query(Employee).filter(Employee.id == emp_id)
+    # emp_query.delete(synchronize_session=False)
+    emp_id = emp_query.delete()
+    db.commit()
+    return {"emp_id": emp_id}
+
     
