@@ -6,8 +6,8 @@ from services.index import employee
 from schemas.index import EmployeeData, ListEmployeeResponse
 from models.index import Employee
 
-@emp.get('/')
-async def get_employees(db : Session = Depends(get_db), limit: int = 10, page: int = 1, search: str = '') -> ListEmployeeResponse:
+@emp.get('/', response_model = ListEmployeeResponse)
+async def get_employees(db : Session = Depends(get_db), limit: int = 10, page: int = 1, search: str = ''):
     try:
         employees = employee.get_employees(db, limit, page, search)
         return {'status': 'success', 'results': len(employees), 'employees': employees}
