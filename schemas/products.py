@@ -4,6 +4,7 @@ from typing import List
 
 from pydantic import BaseModel
 from .employee import EmployeeData
+
 class ProductData(BaseModel):
     id: int | None = None
     name : str
@@ -19,7 +20,7 @@ class ProductData(BaseModel):
 class ListProductResponse(BaseModel):
     status: str
     results: int
-    products : List[ProductData] | None = None
+    products : List[ProductData] 
     # products: t.List[t.Tuple[ProductData, EmployeeData]]
 
     class Config:
