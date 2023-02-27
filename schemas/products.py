@@ -1,7 +1,5 @@
 from typing import List
 
-# import typing as t
-
 from pydantic import BaseModel
 from .employee import EmployeeData
 
@@ -21,7 +19,6 @@ class ListProductResponse(BaseModel):
     status: str
     results: int
     products : List[ProductData] 
-    # products: t.List[t.Tuple[ProductData, EmployeeData]]
 
     class Config:
         orm_mode = True
