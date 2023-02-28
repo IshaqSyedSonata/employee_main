@@ -1,7 +1,7 @@
 # employee_main
 A web application using FastApi, SQLAlchemy, MySQL
 
-This tutorial is using MySQL database, and its connection parameters can be checked in config/db.py file.
+This project is using MySQL database, and its connection parameters can be checked in config/db.py file.
 
 Basic Requirements:
 Python 3.10.10 (installed with updated pip)
