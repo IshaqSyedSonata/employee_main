@@ -18,3 +18,10 @@ uvicorn main:app --reload
 Then, in browser, write: http://127.0.0.1:8000
 
 To see swagger docs, write: http://127.0.0.1:8000/docs
+
+
+Unit Test Requirements:
+
+httpx --> pip install httpx
+pytest --> pip install pytest
+
