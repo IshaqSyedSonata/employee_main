@@ -13,7 +13,7 @@ pymysql --> pip install pymysql
 
 After all the pre-requisites are installed, use this command (with administrator rights) to run the application:
 
-uvicorn sql_app.main:app --reload
+uvicorn main:app --reload
 
 Then, in browser, write: http://127.0.0.1:8000
 
