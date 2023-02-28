@@ -3,7 +3,7 @@ from models.index import Employee
 def get_employees(db, limit, page, search):
     skip = (page - 1) * limit
     employees = db.query(Employee
-                # ).filter(Employee.title.contains(search)
+                ).filter(Employee.name.contains(search)
                 ).limit(limit
                 ).offset(skip
                 ).all()
